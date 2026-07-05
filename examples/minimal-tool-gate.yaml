@@ -1,0 +1,9 @@
+version: "1.0.0"
+policyName: minimal-tool-gate
+description: Minimal standalone example: block destructive database tools
+targetAgents: ["*"]
+rules:
+  - ruleId: block_drop_table
+    action: BLOCK
+    condition: "tool.name == 'drop_table'"
+    alertSeverity: CRITICAL

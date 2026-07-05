@@ -1,0 +1,13 @@
+version: "1.0.0"
+policyName: "nato-prou-strict-financial"
+description: "Strict financial controls aligned with NATO PRoU governability and reliability principles."
+targetAgents: ["*"]
+rules:
+  - ruleId: "npl_pol_block_destructive"
+    action: "BLOCK"
+    condition: "tool.name in ['drop_table', 'delete_user']"
+    alertSeverity: "CRITICAL"
+  - ruleId: "npl_pol_require_approval"
+    action: "REQUIRE_HUMAN"
+    condition: "tool.name == 'wire_transfer' && args.amount > 10000"
+    alertSeverity: "MEDIUM"

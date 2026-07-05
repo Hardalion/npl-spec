@@ -1,0 +1,40 @@
+[
+  {
+    "id": "demo_1",
+    "tenantId": "01DEMOPILOTTENANT000000",
+    "action": "agent.policy.blocked",
+    "resourceType": "agent_action",
+    "resourceId": "act_demo_1",
+    "createdAt": "2026-07-04T10:00:00.000Z",
+    "hash": "6a992110fb36aa0ef1aa1ed79f58878899d78ae246f55c4aca3ddbe617c1e494",
+    "prevHash": null,
+    "metadata": {
+      "hashVersion": 2,
+      "tool": "drop_table",
+      "actorType": "agent",
+      "confidence": 1,
+      "regulatoryRelevance": [
+        "DORA"
+      ]
+    }
+  },
+  {
+    "id": "demo_2",
+    "tenantId": "01DEMOPILOTTENANT000000",
+    "action": "agent.action.executed",
+    "resourceType": "agent_action",
+    "resourceId": "act_demo_2",
+    "createdAt": "2026-07-04T10:00:01.000Z",
+    "hash": "527858a678163c4658ab645181557ac456f6e11303cb11bb14c06a0a8c63a79c",
+    "prevHash": "6a992110fb36aa0ef1aa1ed79f58878899d78ae246f55c4aca3ddbe617c1e494",
+    "metadata": {
+      "hashVersion": 2,
+      "tool": "query_positions",
+      "actorType": "agent",
+      "confidence": 0.92,
+      "regulatoryRelevance": [
+        "MIFID2"
+      ]
+    }
+  }
+]
